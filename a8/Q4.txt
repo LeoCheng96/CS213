@@ -1,0 +1,3 @@
+Depending on which thread was created first, there will be more waits for that thread. 
+The wait counters and histogram showed us that later items seemed to have more counts
+and that the thread (producer/consumer) that was created first has more wait times.

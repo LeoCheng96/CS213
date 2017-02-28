@@ -1,0 +1,24 @@
+time ./aRead 10   = 0.013s
+time ./aRead 100  = 0.013s
+time ./aRead 1000 = 0.013s system time: 0.004s
+
+time ./sRead 10   = 0.109s
+time ./sRead 100  = 1.07s
+time ./sRead 1000 = 10.671s
+
+time ./tRead 10   = 0.025s
+time ./tRead 100  = 0.067s
+time ./tRead 1000 = 0.548s system time: 0.540s
+
+For any block size tRead seems to execute faster than sRead but
+slower than aRead. While tRead uses threads to run multiple blocks
+at once it is still not as fast as aRead because it's runtime scales 
+with the number of blocks while aRead has the same runtime regardless 
+of block size. This is because tRead uses threads which takes time to 
+create. 
+
+Also the system time for tRead to execute 1000 blocks 
+took signifigantly longer than the system time for aRead to do the 
+same computation. This is because the system has to run multiple 
+threads at the same time on top of blocking and unblocking which
+slows down the system's preformance.

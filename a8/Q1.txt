@@ -1,0 +1,7 @@
+time ./sRead 10   = 0.109s
+time ./sRead 100  = 1.07s
+time ./sRead 1000 = 10.671s
+
+The execution time for sRead seems to be proportional to the block size.
+This is because sRead reads the disk synchronously and so it has to finish 
+reading one block before beginning the next.

@@ -1,0 +1,3 @@
+CPU Test Procedure:
+
+For our test procedure we manipulated two variables from memory that we set as "a" and "b" as well as loading in specific values into registers. We then went through all the cases and ensured that they were all working as intented. We also made sure to test multiple cases just in case the first test worked by chance. Since all we received all the expected results from each instruction we conclude that our CPU implementation is accurate.

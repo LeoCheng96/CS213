@@ -1,0 +1,15 @@
+2a) 7-8 and 20-21
+
+2b) 15-16 and 30-31
+
+2c) 
+
+
+2c) Replace 7 with: ld $0xfffffff4, r0.
+    Replace 20 with: ld $0xfffffff0, r0.
+
+    Insert after 8: inca r5. 
+    Insert after 21: inca r5.
+
+2d) Insert after 12: ld   $0x1, r0
+	Insert after 12: st   r0, 0x8(r5)

@@ -1,0 +1,1 @@
+With semaphores we do not have to use while loops.

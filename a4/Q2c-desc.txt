@@ -1,0 +1,1 @@
+There are two memory reads for the third line of foo. One is loading the value of s.z (&heap1) and the other is loading the value of s.z->x[i]. The other lines were simply grabbing the address of values which doesnt require a memory read or storing which is a memory write.

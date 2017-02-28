@@ -1,0 +1,5 @@
+1a) The S7-statoc-calls-stack uses the stack to store the return address of the callee while S7-statoc-calls-reg stores it in a register.
+
+b) A benefit of using the stack method is that each task has it's own stack so multiple tasks can be run simultaneously. 
+
+c) Storing the return address in a register is much quicker as seen by the amount of code in S7-statoc-calls-reg and less memory reads and writes. 

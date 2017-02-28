@@ -1,0 +1,13 @@
+time ./aRead 10   = 0.013s
+time ./aRead 100  = 0.013s
+time ./aRead 1000 = 0.013s
+
+time ./sRead 10   = 0.109s
+time ./sRead 100  = 1.07s
+time ./sRead 1000 = 10.671s
+
+For any block size aRead seems to execute faster than sRead. 
+Also aRead takes the same amount of time to execute regardless 
+of block size. This is because aRead uses asynchronous disk reads
+which allows it to read multiple disks at once unlike sRead which
+needs to finish reading one disk before starting to read the next.

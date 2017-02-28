@@ -1,0 +1,1 @@
+There is only one memory read in the first line of foo which is loading the value at s.x[i] into a register. The other loads simply grabs the address of a variable and doesn't count as a memory read. Also storing is a memory write rather than a memory read.

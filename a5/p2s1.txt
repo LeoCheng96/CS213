@@ -1,0 +1,1 @@
+When we pop() an element from the stack, we free(e). However, there is a " char* x " that points to the memory where e->name is. This pointer, " char* x " is a dangling pointer to e, since e has been deallocated, the content "char* x" is pointer to may have been changed. 
